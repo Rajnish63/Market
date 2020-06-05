@@ -22,7 +22,7 @@ AppBar iconAppBar({
         icon: Icon(Icons.arrow_back, color: Colors.black, size: 20.0),
         onPressed: () => Navigator.of(context).pop(),
       ),
-      backgroundColor: hasFilter ? Colors.white : Colors.transparent,
+      backgroundColor: Colors.white,
       elevation: hasFilter ? 2 : 0,
       centerTitle: true,
       title: Text(title,

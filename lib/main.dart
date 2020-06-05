@@ -9,6 +9,7 @@ import 'package:market/screens/forgot-password.dart';
 import 'package:market/screens/home.dart';
 import 'package:market/screens/filters.dart';
 import 'package:market/screens/product-list.dart';
+import 'package:market/screens/product.dart';
 
 void main() => runApp(MyApp());
 
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         '/shop': (ctx) => Shop(), 
         '/products': (ctx) => ProductList(),
         '/filters': (ctx) => Filters(),
-        '/': (ctx) => Landing(),
+        '/': (ctx) => Product(), //Landing(),
       },
     );
   }

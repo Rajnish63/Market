@@ -45,7 +45,7 @@ class _ShopState extends State<Shop> {
 
                 Container(
                   padding: EdgeInsets.only(
-                      top: 0, left: 16.0, right: 16.0, bottom: 0.0),
+                      top: 8.0, left: 16.0, right: 16.0, bottom: 0.0),
                   child: PrimaryButton(
                       onClick: () {
                         Navigator.pushNamedAndRemoveUntil(
