@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:market/components/bottom-nav.dart';
 import 'package:market/components/catalog-item-one.dart';
-import 'package:market/components/search-appbar.dart';
+import 'package:market/components/icon-appbar.dart';
 import 'package:market/resources/colors.dart';
 
 class ProductList extends StatefulWidget {
@@ -43,6 +43,10 @@ class _ProductListState extends State<ProductList> {
       'isNew': false
     }
   ];
+
+  void onClickSearchIcon() {
+    // complete here
+  }
   
 
   @override
@@ -55,7 +59,7 @@ class _ProductListState extends State<ProductList> {
     return Scaffold(
       resizeToAvoidBottomPadding: false,
       backgroundColor: ThemeColor.BACKGROUND,
-      appBar: searchAppBar(context: context, title: 'Shopper', hasFilter: true),
+      appBar: iconAppBar(context: context, title: 'Shopper', onClick: onClickSearchIcon, hasFilter: true),
       bottomNavigationBar: BottomNavBar(1),
       body: SafeArea(
         child: Container(

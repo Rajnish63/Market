@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:market/components/button.dart';
-import 'package:market/components/search-appbar.dart';
+import 'package:market/components/icon-appbar.dart';
 import 'package:market/resources/colors.dart';
 import 'package:market/components/bottom-nav.dart';
 
@@ -25,12 +25,16 @@ class _ShopState extends State<Shop> {
     {'title': 'Jumpsuites', 'id': '56899'},
   ];
 
+  void onClickSearch() {
+    // complete here
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         resizeToAvoidBottomPadding: false,
         backgroundColor: ThemeColor.BACKGROUND,
-        appBar: searchAppBar(context: context, title: 'Category'),
+        appBar: iconAppBar(context: context, title: 'Category', onClick: onClickSearch),
         bottomNavigationBar: BottomNavBar(1),
         body: SafeArea(
           child: Container(

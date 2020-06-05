@@ -2,7 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:market/components/filter-bar.dart';
 import 'package:market/resources/colors.dart';
 
-AppBar searchAppBar({context, title, hasFilter = false}) {
+/// Returns [AppBar] containing icon on right and title in center
+///
+/// The arguments [context], [title] and [onCLick] must not be null.
+/// 
+/// Requires argument [hasFilter] to allows filter on
+/// bottom of app (by setting less bottom padding).
+/// 
+/// Supply [rightIcon] to change the icon on right side (default: Search)
+AppBar iconAppBar({
+  context,
+  title,
+  onClick,
+  hasFilter = false,
+  rightIcon = Icons.search,
+}) {
   return AppBar(
       leading: IconButton(
         icon: Icon(Icons.arrow_back, color: Colors.black, size: 20.0),
@@ -22,7 +36,8 @@ AppBar searchAppBar({context, title, hasFilter = false}) {
           child: !hasFilter ? Container() : FilterBar()),
       actions: [
         IconButton(
-            icon: Icon(Icons.search, color: ThemeColor.BLACK, size: 20.0),
-            onPressed: () {}),
+          icon: Icon(rightIcon, color: ThemeColor.BLACK, size: 20.0),
+          onPressed: onClick,
+        ),
       ]);
 }
