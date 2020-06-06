@@ -10,6 +10,7 @@ import 'package:market/screens/home.dart';
 import 'package:market/screens/filters.dart';
 import 'package:market/screens/product-list.dart';
 import 'package:market/screens/product.dart';
+import 'package:market/screens/add-comment.dart';
 
 void main() => runApp(MyApp());
 
@@ -26,9 +27,11 @@ class MyApp extends StatelessWidget {
         '/signup': (ctx) => Signup(),
         '/forgot-password': (ctx) => ForgotPassword(),
         '/shop': (ctx) => Shop(), 
+        '/single-product': (ctx) => Product(),
         '/products': (ctx) => ProductList(),
         '/filters': (ctx) => Filters(),
-        '/': (ctx) => Product(), //Landing(),
+        '/add-comment': (ctx) => AddComment(),
+        '/': (ctx) => Landing(),
       },
     );
   }

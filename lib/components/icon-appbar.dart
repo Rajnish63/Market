@@ -5,10 +5,10 @@ import 'package:market/resources/colors.dart';
 /// Returns [AppBar] containing icon on right and title in center
 ///
 /// The arguments [context], [title] and [onCLick] must not be null.
-/// 
+///
 /// Requires argument [hasFilter] to allows filter on
 /// bottom of app (by setting less bottom padding).
-/// 
+///
 /// Supply [rightIcon] to change the icon on right side (default: Search)
 AppBar iconAppBar({
   context,
@@ -35,9 +35,11 @@ AppBar iconAppBar({
               !hasFilter ? Size.fromHeight(0) : Size.fromHeight(100.0),
           child: !hasFilter ? Container() : FilterBar()),
       actions: [
-        IconButton(
-          icon: Icon(rightIcon, color: ThemeColor.BLACK, size: 20.0),
-          onPressed: onClick,
-        ),
+        (rightIcon != null)
+            ? IconButton(
+                icon: Icon(rightIcon, color: ThemeColor.BLACK, size: 20.0),
+                onPressed: onClick,
+              )
+            : Container(),
       ]);
 }
