@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:market/components/bottom-nav.dart';
 import 'package:market/components/coments-list.dart';
 import 'package:market/resources/colors.dart';
 import 'package:market/components/icon-appbar.dart';

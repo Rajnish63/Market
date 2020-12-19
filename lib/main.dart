@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         '/signup': (ctx) => Signup(),
         '/forgot-password': (ctx) => ForgotPassword(),
         '/shop': (ctx) => Shop(), 
-        '/single-product': (ctx) => Product(),
+        '/product': (ctx) => Product(),
         '/products': (ctx) => ProductList(),
         '/filters': (ctx) => Filters(),
         '/add-comment': (ctx) => AddComment(),
